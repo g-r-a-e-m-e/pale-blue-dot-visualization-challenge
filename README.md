@@ -12,19 +12,13 @@
 1. Clone this repo via CLI or GitHub Desktop
 2. In your terminal of choice...
 
-`git clone https://github.com/g-r-a-e-m-e/pale-blue-dot-visualization-challenge`
-
-`cd pale-blue-dot-visualization-challenge`
-
-`python3 -m venv venv`
-
-`source venv/bin/activate`
-
-`pip install -r requirements.txt`
-
-`cd pipeline`
-
-`python3 pipeline.py`
+```git clone https://github.com/g-r-a-e-m-e/pale-blue-dot-visualization-challenge
+cd pale-blue-dot-visualization-challenge
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+cd pipeline
+python3 pipeline.py```
 
 
 
