@@ -21,6 +21,6 @@ current_date = dt.datetime.now().strftime('%Y-%m-%d')
 citation = f"""GISTEMP Team, 2023: GISS Surface Temperature Analysis (GISTEMP), version 4. NASA Goddard Institute for Space Studies. Dataset accessed {current_date} at https://data.giss.nasa.gov/gistemp/."""
 
 # Write citation to file
-with open('GISTEMP_citation.txt', 'w') as f:
+with open(f'{data_dir}/GISTEMP-citation.txt', 'w') as f:
     f.write(citation)
 f.close()
