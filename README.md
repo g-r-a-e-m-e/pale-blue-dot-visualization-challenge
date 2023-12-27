@@ -5,6 +5,7 @@
 - ~~Explore datasets available through NASA AppEEARS~~
 - ~~Set up data pipeline to pull from https://data.giss.nasa.gov/~~
 - Experiment with three.js Earth visualization
+    - Update `src/world` files
 - Visualize GISTEMP data
 
 ## Getting Started
