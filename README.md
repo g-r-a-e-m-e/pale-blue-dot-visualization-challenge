@@ -22,6 +22,14 @@ cd pipeline
 python3 pipeline.py
 ```
 
+3. Ensure you have Node.js and npm installed. Documentation at https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+4. Run the following...
+
+```
+npm install
+```
+
+5.
 
 ## Changelog
 | Version | Date | Contributor | Notes |
