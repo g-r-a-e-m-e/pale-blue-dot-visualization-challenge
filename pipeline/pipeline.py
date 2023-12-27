@@ -11,7 +11,8 @@ df = pd.read_csv(url)
 
 # Save data to common data directory
 data_dir = os.path.abspath(os.path.join(os.path.dirname( __file__ ), os.pardir, 'data'))
-df.to_csv(f'{data_dir}/GISTEMP.csv',
+df.to_csv(f'{data_dir}/GISTEMP.txt',
+          sep = '\t',
           index = False)
 
 # Get data of data extract
