@@ -1,6 +1,6 @@
 export default [
     {
-        name: 'GISTEMP',
+        name: 'gistempData',
         type: 'txt',
         path: '/data/GISTEMP.txt'
     }

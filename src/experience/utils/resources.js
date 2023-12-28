@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import EventEmitter from "./event-emitter.js"
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
 export default class Resources extends EventEmitter
 {
@@ -23,9 +23,10 @@ export default class Resources extends EventEmitter
     setLoaders()
     {
         this.loaders = {}
-        this.loaders.gltfLoader = new GLTFLoader()
-        this.loaders.textureLoader = new THREE.TextureLoader()
-        this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader()
+        this.loaders.fileLoader = new THREE.FileLoader()
+        // this.loaders.gltfLoader = new GLTFLoader()
+        // this.loaders.textureLoader = new THREE.TextureLoader()
+        // this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader()
     }
 
     startLoading()
@@ -33,16 +34,27 @@ export default class Resources extends EventEmitter
         // Load each source
         for(const source of this.sources)
         {
-            if(source.type === 'gltfModel')
+            if(source.type === 'txt')
             {
-                this.loaders.gltfLoader.load(
+                this.loaders.fileLoader.load(
                     source.path,
                     (file) =>
                     {
                         this.sourceLoaded(source, file)
+                        console.log(source.name)
                     }
                 )
             }
+            // if(source.type === 'gltfModel')
+            // {
+            //     this.loaders.gltfLoader.load(
+            //         source.path,
+            //         (file) =>
+            //         {
+            //             this.sourceLoaded(source, file)
+            //         }
+            //     )
+            // }
             else if(source.type === 'texture')
             {
                 this.loaders.textureLoader.load(
@@ -53,16 +65,16 @@ export default class Resources extends EventEmitter
                     }
                 )
             }
-            else if(source.type === 'cubeTexture')
-            {
-                this.loaders.cubeTextureLoader.load(
-                    source.path,
-                    (file) =>
-                    {
-                        this.sourceLoaded(source, file)
-                    }
-                )
-            }
+            // else if(source.type === 'cubeTexture')
+            // {
+            //     this.loaders.cubeTextureLoader.load(
+            //         source.path,
+            //         (file) =>
+            //         {
+            //             this.sourceLoaded(source, file)
+            //         }
+            //     )
+            // }
         }
     }
 

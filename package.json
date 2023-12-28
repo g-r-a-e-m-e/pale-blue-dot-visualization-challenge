@@ -1,5 +1,6 @@
 {
-    "name": "Pale Blue Dot: Visualization Challenge",
+    "name": "pale-blue-dot-visualization-challenge",
+    "private": true,
     "version": "0.0.1",
     "description": "Contribution to https://www.drivendata.org/competitions/256/",
     "scripts": {

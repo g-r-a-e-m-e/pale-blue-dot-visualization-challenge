@@ -10,10 +10,11 @@ url = 'https://data.giss.nasa.gov/gistemp/tabledata_v4/ZonAnn.Ts+dSST.csv'
 df = pd.read_csv(url)
 
 # Save data to common data directory
-data_dir = os.path.abspath(os.path.join(os.path.dirname( __file__ ), os.pardir, 'data'))
+data_dir = os.path.abspath(os.path.join(os.path.dirname( __file__ ), os.pardir, 'static/data'))
 df.to_csv(f'{data_dir}/GISTEMP.txt',
           sep = '\t',
-          index = False)
+          index = False,
+          float_format = "{:.2f}".format)
 
 # Get data of data extract
 current_date = dt.datetime.now().strftime('%Y-%m-%d')
