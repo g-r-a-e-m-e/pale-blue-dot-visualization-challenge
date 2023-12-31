@@ -23,7 +23,7 @@ export default class Resources extends EventEmitter
     setLoaders()
     {
         this.loaders = {}
-        this.loaders.fileLoader = new THREE.FileLoader()
+        this.loaders.objectLoader = new THREE.ObjectLoader()
         // this.loaders.gltfLoader = new GLTFLoader()
         // this.loaders.textureLoader = new THREE.TextureLoader()
         // this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader()
@@ -34,15 +34,15 @@ export default class Resources extends EventEmitter
         // Load each source
         for(const source of this.sources)
         {
-            if(source.type === 'txt')
+            if(source.type === 'json')
             {
-                this.loaders.fileLoader.load(
+                this.loaders.objectLoader.load(
                     source.path,
-                    (file) =>
-                    {
-                        this.sourceLoaded(source, file)
-                        console.log(source.name)
-                    }
+                    // (file) =>
+                    // {
+                    //     this.sourceLoaded(source, file)
+                    //     console.log(source.name)
+                    // }
                 )
             }
             // if(source.type === 'gltfModel')

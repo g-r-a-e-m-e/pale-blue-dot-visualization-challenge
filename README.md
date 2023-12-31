@@ -7,6 +7,7 @@
 - Experiment with three.js Earth visualization
     - Update `src/world` files
 - Visualize GISTEMP data
+    - Need to assign 3D position based off of lat/long and surface of Earth model. Ex. Vector3(<lat>, <long>, <sphere_surface>)
 
 ## Getting Started
 
