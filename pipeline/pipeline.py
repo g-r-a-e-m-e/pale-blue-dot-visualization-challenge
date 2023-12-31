@@ -15,6 +15,9 @@ df.to_csv(f'{data_dir}/GISTEMP.txt',
           sep = '\t',
           index = False,
           float_format = "{:.2f}".format)
+df.to_json(f'{data_dir}/GISTEMP.json',
+           orient = 'columns',
+           double_precision = 2)
 
 # Get data of data extract
 current_date = dt.datetime.now().strftime('%Y-%m-%d')
